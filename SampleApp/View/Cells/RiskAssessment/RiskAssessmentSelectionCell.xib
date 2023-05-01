@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="260" id="KGk-i7-Jjw" customClass="RiskAssessmentSelectionCell" customModule="IKeepUsSafe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cough" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdX-Gi-t7m" customClass="FontLabel" customModule="IKeepUsSafe" customModuleProvider="target">
+                        <rect key="frame" x="30" y="10" width="260" height="19"/>
+                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                        <color key="textColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTag" value="3148"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGF-gS-knx">
+                        <rect key="frame" x="106" y="39" width="38" height="38"/>
+                        <state key="normal" image="ic_yes_unselected"/>
+                        <state key="selected" image="ic_yes_selected"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkT-Yo-SZY">
+                        <rect key="frame" x="176" y="39" width="38" height="38"/>
+                        <state key="normal" image="ic_no_unselected"/>
+                        <state key="selected" image="ic_no_selected"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="CGF-gS-knx" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.9" id="2s0-2q-FMi"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vkT-Yo-SZY" secondAttribute="bottom" constant="5" id="RqP-jT-Ccw"/>
+                    <constraint firstAttribute="trailing" secondItem="jdX-Gi-t7m" secondAttribute="trailing" constant="30" id="WNg-TN-zzN"/>
+                    <constraint firstItem="vkT-Yo-SZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.1" id="ZbM-4a-3jM"/>
+                    <constraint firstItem="vkT-Yo-SZY" firstAttribute="top" secondItem="jdX-Gi-t7m" secondAttribute="bottom" constant="10" id="c8V-e0-Vo7"/>
+                    <constraint firstItem="CGF-gS-knx" firstAttribute="centerY" secondItem="vkT-Yo-SZY" secondAttribute="centerY" id="cci-dB-NZ7"/>
+                    <constraint firstItem="jdX-Gi-t7m" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ssN-0C-wR8"/>
+                    <constraint firstItem="jdX-Gi-t7m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="yxa-To-aXX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnNo" destination="vkT-Yo-SZY" id="eZJ-FX-bq8"/>
+                <outlet property="btnYes" destination="CGF-gS-knx" id="xwJ-tb-AeJ"/>
+                <outlet property="lblTitle" destination="jdX-Gi-t7m" id="AGJ-Bl-zJi"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="194.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_no_selected" width="37.5" height="37.5"/>
+        <image name="ic_no_unselected" width="37.5" height="37.5"/>
+        <image name="ic_yes_selected" width="37.5" height="37.5"/>
+        <image name="ic_yes_unselected" width="37.5" height="37.5"/>
+    </resources>
+</document>

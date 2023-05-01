@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="M2a-b5-3g1" customClass="Loader" customModule="IKeepUsSafe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hAk-WK-Vub">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.39902611300000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98G-TL-uAT" customClass="CustomizedView" customModule="IKeepUsSafe" customModuleProvider="target">
+                    <rect key="frame" x="177" y="423" width="60" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqZ-SZ-KUl" customClass="Spinner" customModule="IKeepUsSafe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="BqZ-SZ-KUl" secondAttribute="height" id="FSa-w5-tnN"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-I7-R5p" customClass="FontLabel" customModule="IKeepUsSafe" customModuleProvider="target">
+                            <rect key="frame" x="60" y="30" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontTag" value="1248"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Jyq-2m-OTo"/>
+                        <constraint firstItem="MUb-I7-R5p" firstAttribute="centerY" secondItem="BqZ-SZ-KUl" secondAttribute="centerY" id="KOW-hQ-MAc"/>
+                        <constraint firstAttribute="trailing" secondItem="MUb-I7-R5p" secondAttribute="trailing" id="QHs-Gv-ndH"/>
+                        <constraint firstItem="BqZ-SZ-KUl" firstAttribute="top" secondItem="98G-TL-uAT" secondAttribute="top" id="hR3-cb-XMV"/>
+                        <constraint firstItem="MUb-I7-R5p" firstAttribute="leading" secondItem="BqZ-SZ-KUl" secondAttribute="trailing" id="ki3-T5-s6Q"/>
+                        <constraint firstAttribute="bottom" secondItem="BqZ-SZ-KUl" secondAttribute="bottom" id="mdk-Kw-vKc"/>
+                        <constraint firstItem="BqZ-SZ-KUl" firstAttribute="leading" secondItem="98G-TL-uAT" secondAttribute="leading" id="pln-dP-e7Q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hAk-WK-Vub" firstAttribute="bottom" secondItem="M2a-b5-3g1" secondAttribute="bottom" id="5pL-nc-XQx"/>
+                <constraint firstItem="hAk-WK-Vub" firstAttribute="top" secondItem="M2a-b5-3g1" secondAttribute="top" id="M0b-BG-Ra3"/>
+                <constraint firstItem="98G-TL-uAT" firstAttribute="centerY" secondItem="jJF-hI-SHi" secondAttribute="centerY" id="NNE-ZD-ecH"/>
+                <constraint firstItem="98G-TL-uAT" firstAttribute="centerX" secondItem="jJF-hI-SHi" secondAttribute="centerX" id="bCv-4K-Zdv"/>
+                <constraint firstItem="hAk-WK-Vub" firstAttribute="leading" secondItem="jJF-hI-SHi" secondAttribute="leading" id="iHj-TJ-o0d"/>
+                <constraint firstItem="98G-TL-uAT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jJF-hI-SHi" secondAttribute="leading" constant="20" id="rF8-5k-GJ8"/>
+                <constraint firstItem="hAk-WK-Vub" firstAttribute="trailing" secondItem="jJF-hI-SHi" secondAttribute="trailing" id="vav-iK-sms"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jJF-hI-SHi"/>
+            <connections>
+                <outlet property="lblMessage" destination="MUb-I7-R5p" id="tiT-YK-NqG"/>
+                <outlet property="spinnerView" destination="BqZ-SZ-KUl" id="wnf-F8-zWm"/>
+            </connections>
+            <point key="canvasLocation" x="-334" y="35"/>
+        </view>
+    </objects>
+</document>

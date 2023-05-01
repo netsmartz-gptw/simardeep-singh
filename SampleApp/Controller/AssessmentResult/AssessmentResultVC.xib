@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssessmentResultVC" customModule="IKeepUsSafe" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="DbC-6t-gYq" id="VIz-Zk-L4f"/>
+                <outlet property="lblMsg" destination="Z8P-V7-U4N" id="6ZJ-q0-6mo"/>
+                <outlet property="lblStatus" destination="J7C-mS-Mp9" id="Vkk-ge-3x7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tick_result" translatesAutoresizingMaskIntoConstraints="NO" id="DbC-6t-gYq">
+                    <rect key="frame" x="164.5" y="119" width="85.5" height="85.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7C-mS-Mp9" customClass="FontLabel" customModule="IKeepUsSafe" customModuleProvider="target">
+                    <rect key="frame" x="34" y="244.5" width="346" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="fontTag" value="3275"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8P-V7-U4N" customClass="FontLabel" customModule="IKeepUsSafe" customModuleProvider="target">
+                    <rect key="frame" x="30" y="847" width="354" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="fontTag" value="3254"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="J7C-mS-Mp9" firstAttribute="top" secondItem="DbC-6t-gYq" secondAttribute="bottom" constant="40" id="0iY-Jn-a7b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Z8P-V7-U4N" secondAttribute="bottom" constant="15" id="6aG-e7-ss6"/>
+                <constraint firstItem="J7C-mS-Mp9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="AmD-ca-aP3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J7C-mS-Mp9" secondAttribute="trailing" constant="34" id="B5A-5b-a9d"/>
+                <constraint firstAttribute="trailing" secondItem="Z8P-V7-U4N" secondAttribute="trailing" constant="30" id="Mm9-Eu-sPf"/>
+                <constraint firstItem="DbC-6t-gYq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="75" id="NW7-51-wyF" customClass="TopConstraint" customModule="IKeepUsSafe" customModuleProvider="target"/>
+                <constraint firstItem="Z8P-V7-U4N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="R8f-fQ-B7E"/>
+                <constraint firstItem="DbC-6t-gYq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hyL-4l-xGw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="123"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_tick_result" width="85.5" height="85.5"/>
+    </resources>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="Tuv-5h-4mw" customClass="ErrorView" customModule="E_Catalog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyt-n6-jgd" customClass="ErrorView" customModule="MeraSwaraj" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="807" width="414" height="55"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYi-mU-tWj" customClass="FontLabel" customModule="MeraSwaraj" customModuleProvider="target">
+                            <rect key="frame" x="8" y="18" width="396" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontTag" value="1042"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="IYi-mU-tWj" secondAttribute="bottom" constant="20" id="3aF-d8-DAV"/>
+                        <constraint firstItem="IYi-mU-tWj" firstAttribute="top" secondItem="Tyt-n6-jgd" secondAttribute="top" constant="18" id="MRv-Sj-6uI"/>
+                        <constraint firstItem="IYi-mU-tWj" firstAttribute="leading" secondItem="Tyt-n6-jgd" secondAttribute="leading" constant="8" id="TCx-sI-HLy"/>
+                        <constraint firstAttribute="trailing" secondItem="IYi-mU-tWj" secondAttribute="trailing" constant="10" id="k9n-cN-T0j"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="lFk-Ub-dmN" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Tyt-n6-jgd" secondAttribute="bottom" id="IKt-Uj-xAf"/>
+                <constraint firstItem="Tyt-n6-jgd" firstAttribute="trailing" secondItem="lFk-Ub-dmN" secondAttribute="trailing" id="OCK-jH-7iJ"/>
+                <constraint firstItem="Tyt-n6-jgd" firstAttribute="leading" secondItem="lFk-Ub-dmN" secondAttribute="leading" id="ZhJ-Jj-RxE"/>
+                <constraint firstItem="lFk-Ub-dmN" firstAttribute="bottom" secondItem="Tyt-n6-jgd" secondAttribute="top" priority="999" constant="500" id="dWl-Tv-dau"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="lFk-Ub-dmN"/>
+            <connections>
+                <outlet property="lblError" destination="IYi-mU-tWj" id="Rsh-4y-GM7"/>
+                <outlet property="lcBottom" destination="dWl-Tv-dau" id="vDa-BB-Mfb"/>
+            </connections>
+            <point key="canvasLocation" x="-379" y="319"/>
+        </view>
+    </objects>
+</document>
